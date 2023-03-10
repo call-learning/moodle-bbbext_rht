@@ -28,5 +28,5 @@ defined('MOODLE_INTERNAL') || die;
 $settings->add(new admin_setting_configtext('bbbext_sample/analytics_callback_url',
     new lang_string('config_analytics_callback_url', 'bbbext_sample'),
     new lang_string('config_analytics_callback_url_description', 'bbbext_sample'),
-    1024,
+    '',
     PARAM_URL));
