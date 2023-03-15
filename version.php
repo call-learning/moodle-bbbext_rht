@@ -27,3 +27,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version   = 2023020800;
 $plugin->requires  = 2023020300;
 $plugin->component = 'bbbext_sample';
+$plugin->dependencies = [
+    'mod_bigbluebuttonbn' => 2023032201,
+];

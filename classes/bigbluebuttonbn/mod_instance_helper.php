@@ -13,9 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-namespace bbbext_sample;
-
-use mod_bigbluebuttonbn\local\bigbluebutton\api\mod_form_manager;
+namespace bbbext_sample\bigbluebuttonbn;
 
 /**
  * Completion raise hand twice computation class
@@ -25,7 +23,7 @@ use mod_bigbluebuttonbn\local\bigbluebutton\api\mod_form_manager;
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @author    Laurent David (laurent@call-learning.fr)
  */
-class mod_raise_twice_form_manager extends mod_form_manager {
+class mod_instance_helper extends \mod_bigbluebuttonbn\local\extension\mod_instance_helper {
     /**
      * Is the form element enabled
      *
@@ -79,7 +77,7 @@ class mod_raise_twice_form_manager extends mod_form_manager {
         // Fetch data from the submodule table.
         $completioninfo = [];
         if (!empty($currentdata->id)) {
-            $completioninfo = completion_raise_hand_twice::get_module_completion_info($currentdata->id);
+            $completioninfo = completion_component::get_module_completion_info($currentdata->id);
         }
         $defaultvalues = array_merge($defaultvalues, $completioninfo);
     }

@@ -13,10 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-namespace bbbext_sample;
-
-use mod_bigbluebuttonbn\instance;
-use mod_bigbluebuttonbn\local\bigbluebutton\api\completion_component;
+namespace bbbext_sample\bigbluebuttonbn;
 
 /**
  * Completion raise_hand_twice computation class
@@ -26,7 +23,7 @@ use mod_bigbluebuttonbn\local\bigbluebutton\api\completion_component;
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @author    Laurent David (laurent@call-learning.fr)
  */
-class completion_raise_hand_twice extends completion_component {
+class completion_component extends \mod_bigbluebuttonbn\local\bigbluebutton\extension\completion_component {
     /**
      * Get current setting for this instance
      *
